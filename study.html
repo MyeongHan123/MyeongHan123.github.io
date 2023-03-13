@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <meta name="application-name" content="HTML5 Tech."/>
+   <meta content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+   <title></title>
+
+   <link href="https://MyeongHan123.github.io/css/menu_style.css" rel="stylesheet" />
+   <link href="https://MyeongHan123.github.io/css/accordion_style.css" rel="stylesheet" />
+   <link href="https://myeonghan123.github.io/css/html_css.css" rel="stylesheet" />
+</head>
+<body>
+   <header>
+      <nav id='cssmenu'>
+         <ul>
+            <li><a href='https://myeonghan123.github.io/index.html'><span>홈</span></a></li>
+            <li class='active has-sub'><a id='lecture_show' title='자기소개입니다.' href='#'><span>소개</span></a></li>
+            <li class='active has-sub'><a href='https://myeonghan123.github.io/study.html'><span>공부하고 있는 과목</span></a>
+              
+         </ul>
+            </li>
+            <li class='active has-sub'><a href='#'><span>갤러리</span></a>
+               <ul>
+                  <li class='has-sub'><a href='#'><span>구리</span></a>
+                     <ul>
+                        <li><a href='https://postimg.cc/gallery/7GNq9xH' target='_blank'><span>사진보러가기</span></a></li>
+                     </ul>
+                  </li>
+                  <li class='has-sub'><a href='#'><span>다리</span></a>
+                     <ul>
+                        <li><a href='https://postimg.cc/gallery/WpmDddh' target='_blank'><span>사진보러가기</span></a></li>
+                     </ul>
+                  </li>
+                  <li class='has-sub'><a href='#'><span>레이</span></a>
+                     <ul>
+                        <li><a href='https://postimg.cc/gallery/cL2B4vb' target='_blank'><span>사진보러가기</span></a></li>
+                     </ul>
+                  </li>
+  
+               </ul>
+            </li>
+            <li class='active has-sub'><a href='#'><span>문의</span></a>
+               <ul><!-- 페이스북,인스타,블로그 -->
+                  <li><a href='https://www.facebook.com/profile.php?id=100003839051701'><span>페이스북</span></a></li>
+                  <li><a href='https://www.instagram.com/uiophdsa/'><span>인스타그램</span></a></li>
+                   <li><a href='https://blog.naver.com/sky138456' target='_blank'><span>블로그</span></a></li>
+               </ul>
+            </li>
+         </ul>
+      </nav>
+   </header>
+   <article id='container'>
+      <dialog id="html5_lecture">
+         <center><h2>살펴보기</h2></center>
+         <article class="accordion">
+             <section id="chapt1">
+                 <h2><a href="#chapt1">간단 소개</a></h2>
+                 <p><mark>이름:</mark> 한명기 </p>
+                 <p><mark>나이:</mark> 1987.12.26</p>
+                 <p><mark>사는곳:</mark> 경기도 용인시 기흥구 보라동 거주</p>
+             </section>
+             <section id="chapt2">
+                 <h2><a href="#chapt2">학력사항</a></h2>
+                 <p>서룡초등학교 </p>
+                 <p>용인중학교 </p>
+				 <p>용인정보고등학교 </p>
+				 <p>학점은행제 정보통신과</p>
+				 <p>방송통신대학교 컴퓨터과학과 3학년 편입</p>
+             </section>
+             <section id="chapt3">
+                 <h2><a href="#chapt3">자격사항</a></h2>
+				 <p>워드프로세서 2급</p>
+				 <p>컴퓨터활용능력 2급</p>
+				 <p>정보기기운용기능사</p>
+            </section>
+		    <section id="chapt4">
+                <h2><a href="#chapt4">요즘하는일</a></h2>
+				 <p>길고양이와 놀아주고 먹이를 주게되면서 관심을 갖게 되어서
+				 추후 이사를 가게된다면 길고양이 입양계획을 가지고 있습니다.</p>
+            </section>
+  
+         </article>
+         <center><br><button id="lecture_exit" onclick="lecture_close(); return false;">닫기</button></center>
+      </dialog>
+
+      <dialog id="intro">
+         <center>
+            <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpngGRjYX1ca7qAADU3K6eGLj7ShQE3L2otdzfryl_Y9Ht2QRoQKYQbsXd36XIxMbYOw0&usqp=CAU" width="300" height="350" /></div>
+            <p><mark><strong>안녕하세요</strong></mark>컴퓨터과학과에 재학중인 한명기입니다<br>
+               <strong><mark>HTML5로 자기소개서를 만들고 있습니다.</mark></strong><br>
+            <p>현재 3학년 편입중이며 컴퓨터관련 기술을 배우고 있습니다.<br><br>
+           
+            <button id="intro_exit">입장하기</button>
+         </center>
+      </dialog>
+
+      <dialog id="bora_wiki">
+         <ul>
+            <li><a href='https://ko.wikipedia.org/wiki/%EB%B3%B4%EB%9D%BC%EB%8F%99' target='_blank'>보라동 위키백과</a></li> 
+         </ul>
+         <center><br><button id="bora_exit">닫기</button></center>
+      </dialog>
+   </article>
+   <footer>
+      <center>
+         <button id="bora_show">사는곳</button>      
+      </center>
+   </footer>
+   <script>
+      (function() {
+         var dlg_intro = document.getElementById('intro');
+         document.getElementById('intro_exit').onclick = function() { dlg_intro.close(); };
+         dlg_intro.showModal();
+
+         var dlg_games = document.getElementById('bora_wiki');
+         document.getElementById('bora_show').onclick = function() { dlg_games.showModal(); };
+         document.getElementById('bora_exit').onclick = function() { dlg_games.close(); };
+
+         var lecture = document.getElementById('html5_lecture');
+         document.getElementById('lecture_show').onclick = function() { lecture.showModal(); };
+         document.getElementById('lecture_exit').onclick = function() { lecture.close(); };
+
+      })();
+   </script>
+</body>
+</html>
