@@ -15,6 +15,7 @@ article#container {
  min-height:80%;
  overflow: auto; 
  background: url('https://MyeongHan123.github.io/images/dari.png') center top no-repeat fixed;
+ background-size: 300px 150px;
 }
 
 dialog#intro {
