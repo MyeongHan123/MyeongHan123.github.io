@@ -13,8 +13,8 @@ footer p { font-size: 12px; }
 article#container {
  width: 100%;
  min-height:80%;
- overflow: auto;
- background: url('MyeongHan123.github.io/images/dari.png') center top no-repeat fixed;
+ overflow: auto; 
+ background: url('myeonghan123.github.io/images/dari.png') center top no-repeat fixed;
 }
 
 dialog#intro {
