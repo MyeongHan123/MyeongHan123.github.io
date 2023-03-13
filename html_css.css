@@ -1,0 +1,87 @@
+html, body { height: 100%; margin: 0; overflow:hidden; }
+header, footer { display: block; }
+header { height: 3em; }
+footer {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ height: 7em;
+ background-color: rgba(128,128,128,0.3);
+}
+footer p { font-size: 12px; }
+
+article#container {
+ width: 100%;
+ min-height:80%;
+ overflow: auto;
+ background: url('https://i.postimg.cc/Hk6pGd2x/image.png') center top no-repeat fixed;
+}
+
+dialog#intro {
+    width: 450px;
+    height: 560px;
+    font-size: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+dialog#intro div { width: 300px; height: 350px; overflow: hidden; }
+dialog#intro div>img { width: 100%; height: 100% ; }
+
+dialog#app_games {
+    width: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3)
+}
+
+dialog#html5_lecture {
+    width: 40em;
+    font-size: 12px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3)
+}
+
+#app_games::backdrop, #intro::backdrop, #html5_lecture::backdrop {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6)
+}
+
+#app_games li>a {
+    outline: none;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 16px
+}
+
+#app_games li>a:hover { font-size: 15px; color: maroon }
+
+button {
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    border-width: 0;
+    border-radius: 3px
+}
+
+button#bora_show { background-color: #16a085; }
+button#bora_show:hover { background-color: #e74c3c }
+button#bora_exit, button#intro_exit, button#lecture_exit { background-color: #c0392b; }
+button#bora_exit:hover, button#intro_exit:hover, button#lecture_exit:hover { background-color: #1abc9c }
+
+@media screen and (max-width: 450px) {
+    img {  width: 200px; height: 250px }
+    body { background-color: red }
+}
+@media screen and (min-width: 450px) and (max-width: 800px) {
+    img { width: 300px; height: 400px }
+    body { background-color: silver }
+}
+@media screen and (min-width: 800px) {
+    img { width: 450px; height: 600px }
+    body { background-color: gold }
+}
